@@ -27,25 +27,35 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap:wrap;
+    overflow: auto;
+    width: 100vw;
 }
 
 .game-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 5px;
-    width: 500px;
-    height: 500px;
+    grid-template-columns: 12vw 12vw 12vw;
+    grid-template-rows: 10vw 10vw 10vw;
+    grid-gap: 0.2rem;
+    width: 36vw;
+    height: 30vw;
     background: black;
+    justify-content: center;
+    align-content: center;
 }
 
 .game-container div{
     background-color: beige;
-    font-size: 8rem;
+    font-size: 10vw;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.game-container div:hover{
+    background-color: rgb(208, 208, 187);
 }
 
 .info{
@@ -54,14 +64,30 @@ body{
     align-items: center;
     font-size: 1.1rem;
     font-family: 'Bebas Neue', cursive;
-    width: 500px;
-    height: 500px;
-    background: beige;
+    width: 35vw;
+    height: 70vh;
+    background: rgb(116, 116, 98);
+}
+
+.info span{
+    font-size: 2em;
+}
+
+.reset{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(208, 208, 187);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .footer{
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     height: 10vh;
     width: 100vw;
     display: flex;
@@ -71,5 +97,15 @@ body{
 }
 
 .footer a{
-    margin-left: 10px;
+    margin-left: 0.5vw;
+}
+
+#logo{
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+#logo:hover{
+    transform: rotate(720deg);
+    -webkit-transform: rotate(360deg);
 }
