@@ -11,6 +11,7 @@ boxes.forEach((box) => {
     if (box.innerText === "") {
       box.innerText = turn;
       checkWin()
+      checkDraw()
       turn = changeTurn();
       if(!gameover){
         turnBox.innerText = `Turn for ${turn}`;
@@ -59,4 +60,16 @@ function checkWin(){
       gameover=true
     }
   })
+}
+
+function checkDraw(){
+  let count=0
+  boxes.forEach(box=>{
+    if(box.textContent!==""){
+      count++
+    }
+  })
+  if(count===9){
+   message.textContent="Its a Draw!" 
+  }
 }
