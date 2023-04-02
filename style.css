@@ -112,3 +112,13 @@ body{
     transform: rotate(720deg);
     -webkit-transform: rotate(360deg);
 }
+
+@media screen and (max-width : 800px) {
+
+    .info{
+        margin-top: 5vh;
+        width: 500px;
+        font-size: 0.7rem;
+        height: 20vh;
+    }
+}
